@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Member Scraper",
+  "version": "1.0.0",
+  "description": "Scrape and export Discord server members.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://discord.com/*"
+  ],
+  "background": {
+    "service_worker": "src/entryPoints/background.tsx",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://discord.com/*"
+      ],
+      "js": [
+        "src/entryPoints/content.tsx"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
