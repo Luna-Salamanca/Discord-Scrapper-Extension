@@ -1,7 +1,7 @@
 {
-  "name": "unpacked-extension",
+  "name": "discord-member-scraper",
   "version": "1.0.0",
-  "description": "Unpacked source code",
+  "description": "Scrape and export Discord server members.",
   "type": "module",
   "scripts": {
     "dev": "vite",
